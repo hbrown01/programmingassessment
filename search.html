@@ -1,0 +1,111 @@
+<html>
+<head>
+<script>
+
+function show(shown, hidden, hidden2) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  document.getElementById(hidden2).style.display='none';
+}
+
+</script>
+</head>
+<title>Googly Search</title>
+<body>
+    <style>
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          border: 1px solid black;
+        }
+
+        input[type=submit] {
+          width: 100%;
+          background-color: green;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+        }
+
+        input[type=submit]:hover {
+          background-color: lightgreen;
+        }
+
+        .topnav {
+          background-color: gray;
+          overflow: hidden;
+          font-size: 40px;
+          color: white;
+        }
+
+        .topnav a {
+          float: right;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          background-color: lightgray;
+          color: black;
+        }
+
+        .topnav .active {
+          background-color: blue;
+          color: white;
+}
+    </style>
+
+    <div id="Page1">
+        <div class="topnav">
+          Googly Search
+          <a href="#" onclick="return show('Page3','Page1','Page2');">Advanced Search</a>
+          <a href="#" onclick="return show('Page2','Page1','Page3');">Images</a>
+          <a class="active" href="#" onclick="return show('Page1','Page2','Page3');">Search</a>
+        </div>
+        <body>
+            <form action="https://google.com/search">
+                <input type="text" name="q">
+                <input type="submit" value="Google Search">
+            </form>
+        </body>
+    </div>
+
+    <div id="Page2" style="display:none">
+        <div class="topnav">
+          Googly Search
+          <a href="#" onclick="return show('Page3','Page1','Page2');">Advanced Search</a>
+          <a class="active" href="#" onclick="return show('Page2','Page1','Page3');">Images</a>
+          <a href="#" onclick="return show('Page1','Page2','Page3');">Search</a>
+        </div>
+        <body>
+            <form action="http://images.google.com/images">
+                <input type="text" name="q">
+                <input type="submit" value="Image Search">
+            </form>
+        </body>
+    </div>
+
+    <div id="Page3" style="display:none">
+        <div class="topnav">
+          Googly Search
+          <a class="active" href="#" onclick="return show('Page3','Page1','Page2');">Advanced Search</a>
+          <a href="#" onclick="return show('Page2','Page1','Page3');">Images</a>
+          <a href="#" onclick="return show('Page1','Page2','Page3');">Search</a>
+        </div>
+        <body>
+            <form action="https://google.com/search">
+                <br>All these words<input type="text" name="as_q">
+                <br>Exact word or phrase<input type="text" name="as_epq">
+                <br>Any of these words<input type="text" name="as_oq">
+                <br>None of these words<input type="text" name="as_eq">
+                <input type="submit" value="Advanced Search">
+            </form>
+        </body>
+    </div>
+
+</body>
+</html>
