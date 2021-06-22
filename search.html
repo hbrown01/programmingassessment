@@ -14,18 +14,24 @@ function show(shown, hidden, hidden2) {
 <body>
     <style>
         input[type=text], select {
-          width: 100%;
+          width: 75%;
+          margin-left: 12.5%;
+          margin-right: 12.5%;
+          margin-top: 10px;
+          margin-bottom: 10px;
           padding: 12px 20px;
-          margin: 8px 0;
+          border-radius: 5px;
           border: 1px solid black;
         }
 
         input[type=submit] {
-          width: 100%;
+          width: 60%;
+          margin-left: 20%;
+          margin-right:20%;
           background-color: green;
           color: white;
           padding: 14px 20px;
-          margin: 8px 0;
+          border-radius: 5px;
         }
 
         input[type=submit]:hover {
@@ -33,15 +39,14 @@ function show(shown, hidden, hidden2) {
         }
 
         .topnav {
-          background-color: gray;
+          background-color: white;
           overflow: hidden;
           font-size: 40px;
-          color: white;
         }
 
         .topnav a {
           float: right;
-          color: white;
+          color: black;
           text-align: center;
           padding: 14px 16px;
           text-decoration: none;
@@ -56,7 +61,17 @@ function show(shown, hidden, hidden2) {
         .topnav .active {
           background-color: blue;
           color: white;
-}
+        }
+
+        .logo{
+          font-size: 100px;
+          text-align: center;
+        }
+
+        .as{
+          font-size: 20px;
+          margin-left: 12.5%;
+        }
     </style>
 
     <div id="Page1">
@@ -67,9 +82,10 @@ function show(shown, hidden, hidden2) {
           <a class="active" href="#" onclick="return show('Page1','Page2','Page3');">Search</a>
         </div>
         <body>
+            <h1 class="logo">Googly</h1>
             <form action="https://google.com/search">
                 <input type="text" name="q">
-                <input type="submit" value="Google Search">
+                <input type="submit" value="Googly Search">
             </form>
         </body>
     </div>
@@ -82,6 +98,7 @@ function show(shown, hidden, hidden2) {
           <a href="#" onclick="return show('Page1','Page2','Page3');">Search</a>
         </div>
         <body>
+            <h1 class="logo">Googly Images</h1>
             <form action="http://images.google.com/images">
                 <input type="text" name="q">
                 <input type="submit" value="Image Search">
@@ -97,11 +114,12 @@ function show(shown, hidden, hidden2) {
           <a href="#" onclick="return show('Page1','Page2','Page3');">Search</a>
         </div>
         <body>
+            <h1 class="logo">Googly Advanced Search</h1>
             <form action="https://google.com/search">
-                <br>All these words<input type="text" name="as_q">
-                <br>Exact word or phrase<input type="text" name="as_epq">
-                <br>Any of these words<input type="text" name="as_oq">
-                <br>None of these words<input type="text" name="as_eq">
+                <br><h2 class="as">All these words</h2><input type="text" name="as_q">
+                <br><h2 class="as">Exact word or phrase</h2><input type="text" name="as_epq">
+                <br><h2 class="as">Any of these words</h2><input type="text" name="as_oq">
+                <br><h2 class="as">None of these words</h2><input type="text" name="as_eq">
                 <input type="submit" value="Advanced Search">
             </form>
         </body>
